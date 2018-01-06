@@ -2,6 +2,8 @@
 <html>
 
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1, minimum-scale=1, user-scalable = no">
 	<meta name="apple-touch-fullscreen" content="yes" />
@@ -37,54 +39,279 @@
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://www.azumbrunnen.me/blog/feed/atom" />
 
 	<link rel="stylesheet" href="style.min.css">
+	<link rel="stylesheet" href="card.css">
 
 	<script type="text/javascript" src="chat.js"></script>
 	<script type="text/javascript" src="uhk0ran.js"></script>
+	<script type="text/javascript" src="card.js"></script>
 	<script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
 	<!--[if lt IE 9]>
 		<script src="https://azumbrunnen.me/wp-content/themes/azumbrunnen/app/html5shiv.js"></script>
 	<![endif]-->
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+	 crossorigin="anonymous">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+	 crossorigin="anonymous"></script>
+
+
+	<style>
+		li.restored-item {
+			animation: openspace 0.3s ease forwards,
+			restored-item-animation 0.3s 0.3s cubic-bezier(0, 0.8, 0.32, 1.07) forwards;
+		}
+
+		/*
+    Snippet @keyframe openspace source: http://css-tricks.com/transitional-interfaces-coded/
+*/
+
+		@keyframes openspace {
+			to {
+				height: auto;
+			}
+		}
+
+		@keyframes restored-item-animation {
+			0% {
+				opacity: 0;
+				transform: translateY(600px) rotateZ(90deg);
+			}
+
+			10% {
+				opacity: 1;
+				transform: translateY(600px) rotateZ(90deg);
+			}
+
+			100% {
+				opacity: 1;
+				transform: rotateZ(0);
+			}
+		}
+	</style>
+
 </head>
 
 <body>
-	<div class="page">
-		<div class="intro">
-			<section class="align chat">
-				<div class="chat__overflow">
-					<div class="chat__intro cui">
-						<div class="chat__intro__logo">
-							<img src="https://azumbrunnen.me/wp-content/themes/azumbrunnen/img/adrian_zumbrunnen2.png" alt="adrian_zumbrunnen" />
+	<div class="row">
+		<div class="col-sm-4">
+
+			<div class="row">
+
+				<figure class="snip0057 blue">
+					<figcaption>
+						<h2>Health
+							<span>Insurance 1</span>
+						</h2>
+						<p>The most demanding policy in the market.</p>
+						<div class="icons">
+							<a href="#">
+								<i class="ion-ios-home"></i>
+							</a>
+							<a href="#">
+								<i class="ion-ios-email"></i>
+							</a>
+							<a href="#">
+								<i class="ion-ios-telephone"></i>
+							</a>
 						</div>
-						<div class="chat__intro__desc">
-							Insurance Education
-							<br>
-							<em>Interact + Learn</em>
+					</figcaption>
+					<div class="image">
+						<img src="HI1.jpg" alt="sample3" />
+					</div>
+					<div class="position">Platinum Health Insurance</div>
+				</figure>
+
+
+			</div>
+
+
+
+
+
+
+			<div class="row">
+
+				<figure class="snip0057 red">
+					<figcaption>
+						<h2>Health
+							<span>Insurance 2</span>
+						</h2>
+						<p>Second most demanding policy available in the market for health insurance.</p>
+						<div class="icons">
+							<a href="#">
+								<i class="ion-ios-home"></i>
+							</a>
+							<a href="#">
+								<i class="ion-ios-email"></i>
+							</a>
+							<a href="#">
+								<i class="ion-ios-telephone"></i>
+							</a>
 						</div>
-						<div class="chat__intro__scroll">
-							Scroll, if you want to know what's happening ⇣
+					</figcaption>
+					<div class="image">
+						<img src="HI2.jpg" alt="sample4" />
+					</div>
+					<div class="position">Gold Health Insurance</div>
+				</figure>
+
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div class="row">
+				<div class="col" ontouchstart="this.classList.toggle('hover');">
+					<div class="container">
+						<div id="fimg" class="front" style="background-image: url(https://unsplash.it/500/500/)">
+							<div class="inner">
+								<p>News</p>
+								<span id="titleFeed">News Title</span>
+							</div>
+						</div>
+						<div class="back">
+							<div class="inner">
+								<p id="bodyFeed1">Get the latest happening in the world of Insurance.</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</section>
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+		<div class="col-sm-8">
+			<div class="intro">
+				<section class="align chat">
+					<div class="chat__overflow">
+						<div class="chat__intro cui">
+							<div class="chat__intro__logo">
+								<img src="https://azumbrunnen.me/wp-content/themes/azumbrunnen/img/adrian_zumbrunnen2.png" alt="adrian_zumbrunnen" />
+							</div>
+							<div class="chat__intro__desc">
+								Insurance Education
+								<br>
+								<em>Interact + Learn</em>
+							</div>
+							<div class="chat__intro__scroll">
+								Scroll, if you want to know what's happening ⇣
+							</div>
+
+
+
+							<!--ol id="m" class="cui__list">
+								<li class="cui__list__item">
+									<div class="cui__bubble cui__bubble--slideIn cui__bubble--fade">Hey, welcome to the knowledge !</div>
+								</li>
+
+
+							</ol>
+							<div id="suggestion" class="cui__responses">
+								<div class="cui__bubble cui__bubble--response" style="transform: translate3d(0px, 0px, 0px); opacity: 1;" onclick="addMsg()">Suggestion 1</div>
+								<div class="cui__bubble cui__bubble--response" style="transform: translate3d(0px, 0px, 0px); opacity: 1;" onclick="addMsg()">Suggestion 2</div>
+								<div id="question" class="cui__bubble cui__bubble--response cui__answers__placeholder" contenteditable = "true" style="transform: translate3d(0px, 0px, 0px);"></div>
+							</div-->
+
+
+
+
+
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="page">
+		<div class="intro">
+			<section class="about padding"> </section>
+		</div>
+	</div>
+	<div class="page">
+		<div class="intro">
+			<section class="about padding"> </section>
+		</div>
+	</div>
+
+
+
+	<div class="page">
+		<div class="intro">
+
 			<section class="about padding">
 				<div class="align">
 					<div class="grid">
-						<div class="grid__item one-half palm-one-whole lap-two-thirds">
-							<h2 class="heading--big">About Me</h2>
+						<div class="grid__item one-half palm-one-whole lap-one-half">
+							<h2 class="heading--big">About Us</h2>
 							<p class="lead">
-								Hi! I’m Adrian Zumbrunnen. I’m a designer, writer, speaker and coffee enthusiast currently residing in beautiful Zurich,
-								Switzerland. I help companies create memorable experiences through user centered design.
+								This is a place which consolidates all the FAQ's questions from relevant sources and displays in a very intuitive way.This
+								is also capable of suggesing the relevant insurance policies as and when seems suitable.
 							</p>
-							<p>I’m currently design tinkering on Google Lens, previously Maps.</p>
-							<p>
-								I also
-								<a href="#articles" class="hook-nav">write</a> and
-								<a class="hook-nav" href="#talks">speak</a> about design</em>.
-							</p>
+							<p>Help us to make this world better than ever before.</p>
 
-							<a href="#contact" class="hook-nav rectangle" title="Get in touch">
+
+							<a href="index.html" class="hook-nav rectangle" title="Get in touch">
 								<div class="fs1 rectangle__button rectangle__button--text" aria-hidden="true">
-									<span class="rectangle__button__text">Get In Touch</span>
+									<span class="rectangle__button__text">Experience The Change !</span>
 								</div>
 							</a>
 
@@ -102,6 +329,7 @@
 				</div>
 			</section>
 
+
 		</div>
 		<!-- end intro !-->
 		<!--
@@ -110,23 +338,51 @@
 	</div>
 	<!-- end page -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- end intro !-->
+	<!--
+	 -->
+	<div class="single"></div>
+
+	<!-- end page -->
+
 	<!--[if gt IE 9]><!-->
 	<!--   <script src="https://azumbrunnen.me/wp-content/themes/azumbrunnen/app_dev/vendor/requirejs/require.js" data-main="https://azumbrunnen.me/wp-content/themes/azumbrunnen/app_dev/main.js"></script>
  -->
 	<script src="azumbrunnen.js"></script>
 	<!--<![endif]-->
-	<script>
-		(function (i, s, o, g, r, a, m) {
-		i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-			(i[r].q = i[r].q || []).push(arguments)
-		}, i[r].l = 1 * new Date(); a = s.createElement(o),
-			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-		ga('create', 'UA-42460075-1', 'azumbrunnen.me');
-		ga('send', 'pageview');
 
-	</script>
+
+
+
+
+
+
+
+
 </body>
 
 </html>
